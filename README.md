@@ -17,9 +17,9 @@
 
 ## Summary
 
-p6df module for Apache Superset: data visualization platform integration via
-MCP server (`superset-mcp` via npm) with profile switching
-(`SUPERSET_URL`, `SUPERSET_USERNAME`, `SUPERSET_PASSWORD`).
+Integrates Apache Superset into the p6df shell framework. Provides `profile::on` /
+`profile::off` for managing `SUPERSET_URL`, username, and password, plus MCP server
+installation.
 
 ## Contributing
 
@@ -40,8 +40,13 @@ MCP server (`superset-mcp` via npm) with profile switching
 - `p6df::modules::superset::deps()`
 - `p6df::modules::superset::mcp()`
   - Synopsis: Installs Apache Superset MCP server
-- `p6df::modules::superset::mcp::env()`
-  - Synopsis: Maps Superset env vars to MCP-specific vars
+- `p6df::modules::superset::profile::off()`
+- `p6df::modules::superset::profile::on(profile, [env_or_url=http://localhost:8088], [username=admin], [password=])`
+  - Args:
+    - profile
+    - OPTIONAL env_or_url - [http://localhost:8088]
+    - OPTIONAL username - [admin]
+    - OPTIONAL password - []
 
 ## Hierarchy
 
