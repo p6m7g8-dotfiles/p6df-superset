@@ -47,5 +47,5 @@ p6df::modules::superset::mcp() {
 ######################################################################
 p6df::modules::superset::profile::mod() {
 
-  p6_return_words 'superset' '$SUPERSET_USERNAME'
+  p6_return_words 'superset' "$"
 }
