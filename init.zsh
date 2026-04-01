@@ -37,42 +37,15 @@ p6df::modules::superset::mcp() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::superset::profile::on(profile, code)
+# Function: words superset $SUPERSET_USERNAME = p6df::modules::superset::profile::mod()
 #
-#  Args:
-#	profile -
-#	code - shell code block (export SUPERSET_URL=... SUPERSET_USERNAME=... SUPERSET_PASSWORD=...)
+#  Returns:
+#	words - superset $SUPERSET_USERNAME
 #
-#  Environment:	 P6_DFZ_PROFILE_SUPERSET SUPERSET_PASSWORD SUPERSET_URL SUPERSET_USERNAME
+#  Environment:	 SUPERSET_USERNAME
 #>
 ######################################################################
-p6df::modules::superset::profile::on() {
-  local profile="$1"
-  local code="$2"
+p6df::modules::superset::profile::mod() {
 
-  p6_run_code "$code"
-
-  p6_env_export "P6_DFZ_PROFILE_SUPERSET" "$profile"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::superset::profile::off(code)
-#
-#  Args:
-#	code - shell code block previously passed to profile::on
-#
-#  Environment:	 P6_DFZ_PROFILE_SUPERSET SUPERSET_PASSWORD SUPERSET_URL SUPERSET_USERNAME
-#>
-######################################################################
-p6df::modules::superset::profile::off() {
-  local code="$1"
-
-  p6_env_unset_from_code "$code"
-  p6_env_export_un P6_DFZ_PROFILE_SUPERSET
-
-  p6_return_void
+  p6_return_words 'superset' "$"
 }
