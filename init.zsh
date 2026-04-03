@@ -7,8 +7,6 @@
 #>
 ######################################################################
 p6df::modules::superset::deps() {
-
-  # shellcheck disable=2034
   ModuleDeps=(
     p6m7g8-dotfiles/p6common
   )
@@ -47,5 +45,5 @@ p6df::modules::superset::mcp() {
 ######################################################################
 p6df::modules::superset::profile::mod() {
 
-  p6_return_words 'superset' "$"
+  p6_return_words 'superset' '$SUPERSET_HOME' '$SUPERSET_CONFIG_PATH'
 }
