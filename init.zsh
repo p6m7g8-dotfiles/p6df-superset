@@ -35,12 +35,12 @@ p6df::modules::superset::mcp() {
 ######################################################################
 #<
 #
-# Function: words superset $SUPERSET_USERNAME = p6df::modules::superset::profile::mod()
+# Function: words superset = p6df::modules::superset::profile::mod()
 #
 #  Returns:
-#	words - superset $SUPERSET_USERNAME
+#	words - superset
 #
-#  Environment:	 SUPERSET_USERNAME
+#  Environment:	 SUPERSET_CONFIG_PATH SUPERSET_HOME
 #>
 ######################################################################
 p6df::modules::superset::profile::mod() {
