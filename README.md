@@ -17,9 +17,7 @@
 
 ## Summary
 
-Integrates Apache Superset into the p6df shell framework. Provides `profile::on` /
-`profile::off` for managing `SUPERSET_URL`, username, and password, plus MCP server
-installation.
+TODO: Add a short summary of this module.
 
 ## Contributing
 
@@ -40,13 +38,7 @@ installation.
 - `p6df::modules::superset::deps()`
 - `p6df::modules::superset::mcp()`
   - Synopsis: Installs Apache Superset MCP server
-- `p6df::modules::superset::profile::off()`
-- `p6df::modules::superset::profile::on(profile, [env_or_url=http://localhost:8088], [username=admin], [password=])`
-  - Args:
-    - profile
-    - OPTIONAL env_or_url - [http://localhost:8088]
-    - OPTIONAL username - [admin]
-    - OPTIONAL password - []
+- `words superset = p6df::modules::superset::profile::mod()`
 
 ## Hierarchy
 
